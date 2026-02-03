@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CleaningQuoteForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({ component: App });
@@ -74,29 +74,49 @@ function App() {
 				</div>
 			</div>
 			{/**Services */}
-			<div className="flex flex-col md:flex-row gap-4">
-				<div className="p-4 border-zinc-700 border flex-1/3">
-					<img
-						alt="hero_image"
-						src="https://picsum.photos/id/20/300/100"
-						className="rounded w-75 h-25 bg-red-300"
-					/>
-				</div>
-				<div className="p-4 border-zinc-700 border flex-1/3">
-					<img
-						alt="hero_image"
-						src="https://picsum.photos/id/230/300/100"
-						className="rounded w-75 h-25 bg-red-300"
-					/>
-				</div>
-				<div className="p-4 border-zinc-700 border flex-1/3">
-					<img
-						alt="hero_image"
-						src="https://picsum.photos/id/230/300/100"
-						className="rounded w-75 h-25 bg-red-300"
-					/>
-				</div>
+			<div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+				<Link
+					to="/house-cleaning"
+					className="p-4 hover:opacity-60 rounded-box shadow"
+				>
+					<figure className="w-full aspect-3/1">
+						<img
+							alt="hero_image"
+							src="https://picsum.photos/id/430/600/200"
+							className="rounded w-full h-full bg-red-300"
+						/>
+					</figure>
+					<p className="text-lg font-bold mt-4">House Cleaning Services</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+				</Link>
+				<Link to="/" className="p-4 hover:opacity-60 rounded-box shadow">
+					<figure className="w-full aspect-3/1">
+						<img
+							alt="hero_image"
+							src="https://picsum.photos/id/730/600/200"
+							className="rounded w-full h-full bg-red-300"
+						/>
+					</figure>
+					<p className="text-lg font-bold mt-4">Deep Cleaning Services</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis.
+					</p>
+				</Link>
+				<Link to="/" className="p-4 hover:opacity-60 rounded-box shadow">
+					<figure className="w-full aspect-3/1">
+						<img
+							alt="hero_image"
+							src="https://picsum.photos/id/534/600/200"
+							className="rounded w-full h-full bg-red-300"
+						/>
+					</figure>
+					<p className="text-lg font-bold mt-4">Office Cleaning Services</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis.
+					</p>
+				</Link>
 			</div>
+
 			<div className="size-16" />
 		</main>
 	);

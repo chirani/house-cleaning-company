@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: corporate;
+}
+.main {
+  @apply max-w-300 mx-auto mt-8 p-3;
+}
+.input,
+.range,
+.select {
+  @apply w-full;
+}
